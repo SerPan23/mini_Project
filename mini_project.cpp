@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
     vector<vector<char>> field(10, vector<char>(10));
-    
+
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0; j < 10; j++)
@@ -17,11 +17,6 @@ int main()
             field[i][j] = '$';
         }
     }
-
-    //line(field, 1, 3, 5, 9, '*');
-    //line(field, 5, 9, 1, 3, '*');
-    //empty_circle(field, 4, 4, 3, '*');
-    filled_circle(field, 4, 4, 3, '*');
 
     for (int i = 0; i < 10; i++)
     {
