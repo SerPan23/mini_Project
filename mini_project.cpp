@@ -21,6 +21,4 @@ int main()
         }
         cout << endl;
     }
-
-    std::cout << "Hello World!\n";
 }
