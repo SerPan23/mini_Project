@@ -1,7 +1,7 @@
 #include "funcs.h"
 void filled_rectangular(vector <vector <char>>& field, char r, int x, int y, int width, int height) {
-	for (int i = 0; i < height; i++)
+	for (int i = y; i < height; i++)
 	{
-		line(field, 0, i, width - 1, i, r);
+		line(field, x, i, width - 1, i, r);
 	}
 }
