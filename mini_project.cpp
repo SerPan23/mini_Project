@@ -13,7 +13,7 @@ int main()
     vector<vector<char>> field(h, vector<char>(w));
     background(field, w, h, c);
     
-    /*for (int i = 1; i < commands.size(); i++)
+    for (int i = 1; i < commands.size(); i++)
     {
         string command = commands[i];
         vector <string> args;
@@ -21,28 +21,35 @@ int main()
         cout << command << endl;
         if (command[0] == 'r')
         {
-            int x = str_to_int(args[0]), y = str_to_int(args[1]), width = str_to_int(args[2]), height = str_to_int(args[3]);
-            char c = args[4][0];
+            int x = str_to_int(args[1]), y = str_to_int(args[2]), width = str_to_int(args[3]), height = str_to_int(args[4]);
+            char c = args[0][0];
             empty_rectangular(field, c, x, y, width, height);
         }
         else if (command[0] == 'R')
         {
-            cout << "R";
+            int x = str_to_int(args[1]), y = str_to_int(args[2]), width = str_to_int(args[3]), height = str_to_int(args[4]);
+            char c = args[0][0];
+            filled_rectangular(field, c, x, y, width, height);
         }
         else if (command[0] == 'c')
         {
-            cout << "c";
+            int x = str_to_int(args[1]), y = str_to_int(args[2]), radius = str_to_int(args[3]);
+            char c = args[0][0];
+            empty_circle(field, x, y, radius, c);
         }
         else if (command[0] == 'C')
         {
-            cout << "C";
+            int x = str_to_int(args[1]), y = str_to_int(args[2]), radius = str_to_int(args[3]);
+            char c = args[0][0];
+            filled_circle(field, x, y, radius, c);
         }
         else if (command[0] == 'L')
         {
-            cout << "L";
+            int x = str_to_int(args[1]), y = str_to_int(args[2]), x1 = str_to_int(args[3]), y1 = str_to_int(args[4]);
+            char c = args[0][0];
+            line(field, x, y, x1, y1, c);
         }
-    }*/
-    empty_rectangular(field, '*', 0, 0, 2, 2);
+    }
     for (int i = 0; i < h; i++)
     {
         for (int j = 0; j < w; j++)
