@@ -8,7 +8,7 @@
 using namespace std;
 int main()
 {
-    vector<vector<int>> field(10, vector<int>(10));
+    vector<vector<char>> field(10, vector<char>(10));
     
     for (int i = 0; i < 10; i++)
     {

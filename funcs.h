@@ -11,7 +11,7 @@ void empty_circle();
 void empty_rectangular();
 void filled_circle();
 void filled_rectangular();
-void line(vector <vector <int>>& field, int xa, int ya, int xb, int yb, char c);
+void line(vector <vector <char>>& field, int xa, int ya, int xb, int yb, char c);
 
 
 void fileWrite(string value, string path);
