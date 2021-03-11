@@ -16,8 +16,8 @@ int main()
         }
     }*/
     background(field, w, h, c);
-
-    filled_circle(field, 4, 4, 3, '*');
+    filled_rectangular(field, '*', 0, 0, 5, 5);
+    //filled_circle(field, 4, 4, 3, '*');
 
     for (int i = 0; i < 10; i++)
     {
