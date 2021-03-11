@@ -2,9 +2,12 @@
 //
 
 #include <iostream>
-
+#include <vector>
+using namespace std;
 int main()
 {
+    vector <vector <char>> field;
+
     std::cout << "Hello World!\n";
 }
 
