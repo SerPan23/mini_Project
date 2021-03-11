@@ -11,8 +11,25 @@ void horizontal(vector <vector <int>>& field, int x, int length, char c) {
 	}
 }
 
-void vertical
+void vertical(vector <vector <int>>& field, int y, int length, char c) {
+	for (int i = y; i < length; i++)
+	{
+		field[i][y] = c;
+	}
+}
 
-void line(int xa, int ya, int xb, int yb, char c) {
-	int length = sqrt((xa - xb) * (xa - xb) + (ya - yb) * (ya - yb));
+void line(vector <vector <int>> field, int xa, int ya, int xb, int yb, char c) {
+	if (xa < xb) {
+		swap(xa, xb);
+	}
+	else if (ya < yb) {
+		swap(ya, yb);
+	}
+
+	if (xa == xb) {
+		vertical(field, ya, ya-yb, c);
+	}
+	else if (ya == yb) {
+		horizontal(field, xa, xa-xb, c);
+	}
 }
