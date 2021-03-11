@@ -1,8 +1,5 @@
 ﻿// mini_project.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-
-#include <iostream>
-#include <vector>
 #include "funcs.h"
 
 using namespace std;
