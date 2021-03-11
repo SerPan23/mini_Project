@@ -139,7 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="background.cpp" />
+    <ClCompile Include="empty_circle.cpp" />
+    <ClCompile Include="empty_rectangular.cpp" />
+    <ClCompile Include="filled_circle.cpp" />
+    <ClCompile Include="filled_rectangular.cpp" />
     <ClCompile Include="mini_project.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="funcs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
