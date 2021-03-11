@@ -9,6 +9,7 @@ void printar(vector <vector <char>> field) {
 		}
 		cout << endl;
 	}
+	cout << endl;
 }
 
 void filled_circle(vector <vector <char>>& field, int x0, int y0, int radius, char c) {
@@ -17,23 +18,18 @@ void filled_circle(vector <vector <char>>& field, int x0, int y0, int radius, ch
 	int delta = 1 - 2 * radius;
 	int error = 0;
 	while (y >= 0) {
-		for (int i = 0; i < x; i++)
-		{
-			field[x0 + i][y0 + y] = c;
-		}
-		for (int i = 0; i < x; i++)
-		{
-			field[x0 + x][y0 - y] = c;
-		}
-		for (int i = x; i > 0; i--)
-		{
-			field[x0 - x][y0 + y] = c;
-		}		
-		for (int i = x; i > 0; i--)
-		{
-			field[x0 - x][y0 - y] = c;
-		}
 		
+		for (int i = x0-x; i < x0+x; i++)
+		{
+			for (int j = y0-y; j < y0+y; j++)
+			{
+				field[i][j] = c;
+			}
+			
+		}
+		/*field[x0 + x][y0 - y] = c;
+		field[x0 - x][y0 + y] = c;
+		field[x0 - x][y0 - y] = c;*/
 		error = 2 * (delta + y) - 1;
 		if (delta < 0 && error <= 0) {
 			++x;
@@ -49,7 +45,6 @@ void filled_circle(vector <vector <char>>& field, int x0, int y0, int radius, ch
 		++x;
 		delta += 2 * (x - y);
 		--y;
-
-		printar(field);
 	}
+	
 }
