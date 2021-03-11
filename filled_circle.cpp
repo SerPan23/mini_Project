@@ -1,1 +1,2 @@
-void filled_c();
+#include "funcs.h"
+void filled_circle();
