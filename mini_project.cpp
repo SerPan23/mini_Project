@@ -3,11 +3,32 @@
 
 #include <iostream>
 #include <vector>
+#include "funcs.h"
+
 using namespace std;
 int main()
 {
-    vector <vector <char>> field;
+    vector<vector<int>> field(10, vector<int>(10));
     
+    for (int i = 0; i < 10; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            field[i][j] = '$';
+        }
+    }
+
+    line(field, 1, 1, 9, 6, '*');
+
+    for (int i = 0; i < 10; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            cout << (char)field[i][j];
+        }
+        cout << endl;
+    }
+
     std::cout << "Hello World!\n";
 }
 
