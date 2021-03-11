@@ -19,8 +19,9 @@ int main()
     }
 
     //line(field, 1, 3, 5, 9, '*');
-    line(field, 5, 9, 1, 3, '*');
+    //line(field, 5, 9, 1, 3, '*');
     //empty_circle(field, 4, 4, 3, '*');
+    filled_circle(field, 4, 4, 3, '*');
 
     for (int i = 0; i < 10; i++)
     {
