@@ -6,7 +6,7 @@
 #include <fstream>
 using namespace std;
 
-void background();
+void background(vector <vector <char>>& field, int w, int h, char c);
 void empty_circle(vector <vector <char>>& field, int x0, int y0, int radius, char c);
 void empty_rectangular();
 void filled_circle(vector <vector <char>>& field, int x0, int y0, int radius, char c);
