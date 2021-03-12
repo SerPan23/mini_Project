@@ -6,7 +6,9 @@ int main(int argc, char *argv[])
     vector <string> commands, bgargs;
     if (argc > 2)
     {
+        SetColor(12, 0);
         cout << "Error: a lot of arguments" << endl;
+        SetColor(7, 0);
         return -1;
     }
     if (argc == 1)
@@ -20,7 +22,9 @@ int main(int argc, char *argv[])
     fileRead(path, commands);
     if (commands.size() == 0)
     {
+        SetColor(12, 0);
         cout << "Error: No commands" << endl;
+        SetColor(7, 0);
         return 0;
     }
     string bg = commands[0];
@@ -29,6 +33,7 @@ int main(int argc, char *argv[])
     char c = bgargs[2][0];
     vector<vector<char>> field(h, vector<char>(w));
     background(field, w, h, c);
+    
     
     if(commands.size() > 1)
         for (int i = 1; i < commands.size(); i++)

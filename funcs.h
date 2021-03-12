@@ -1,5 +1,6 @@
 #ifndef FUNCS_H_INCLUDED
 #define FUNCS_H_INCLUDED
+#include <Windows.h>
 #include <iostream>
 #include <vector>
 #include <string>
@@ -18,6 +19,7 @@ void line(vector <vector <char>>& field, int xa, int ya, int xb, int yb, char c)
 void swap(int& a, int& b);
 int str_to_int(string str);
 void command_parser(vector <string>& args, string command);
+void SetColor(int text, int bg);
 
 /* Функции работы с файлами */
 void fileRead(string path, vector <string>& commands);
