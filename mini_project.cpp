@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
     if (argc == 1)
     {
         path = "H:\\Codes\\с++_school\\mini_Project\\operation.it";
+        //cout << "Write the path to the file:" << endl;
         //cin >> path;
     }
     else
