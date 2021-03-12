@@ -1,11 +1,28 @@
 ﻿#include "funcs.h"
 
-int main()
+int main(int argc, char *argv[])
 {
-    string path = "H:\\Codes\\с++_school\\mini_Project\\operation.it";
-    //cin >> w >> h >> c;
+    string path;
     vector <string> commands, bgargs;
+    if (argc > 2)
+    {
+        cout << "Error: a lot of arguments" << endl;
+        return -1;
+    }
+    if (argc == 1)
+    {
+        path = "H:\\Codes\\с++_school\\mini_Project\\operation.it";
+        //cin >> path;
+    }
+    else
+        path = argv[1];
+
     fileRead(path, commands);
+    if (commands.size() == 0)
+    {
+        cout << "Error: No commands" << endl;
+        return 0;
+    }
     string bg = commands[0];
     command_parser(bgargs, bg);
     int w = str_to_int(bgargs[0]), h = str_to_int(bgargs[1]);
