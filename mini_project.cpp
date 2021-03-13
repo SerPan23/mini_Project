@@ -7,9 +7,7 @@ int main(int argc, char *argv[])
     vector <string> commands, bgargs;
     if (argc > 2)
     {
-        SetColor(12, 0);
-        cout << "Error: a lot of arguments" << endl;
-        SetColor(7, 0);
+        printError("Error: a lot of arguments");
         return -1;
     }
     if (argc == 1)
@@ -25,25 +23,19 @@ int main(int argc, char *argv[])
     int pathSize = path.size();
     if (path[pathSize - 2] != 'i' || path[pathSize - 1] != 't')
     {
-        SetColor(12, 0);
-        cout << "Error: Operation file has not correct extension" << endl;
-        SetColor(7, 0);
+        printError("Error: Operation file has not correct extension");
         return -1;
     }
     else if (path[pathSize - 12] != 'o' || path[pathSize - 11] != 'p' || path[pathSize - 10] != 'e' || path[pathSize - 9] != 'r' || path[pathSize - 8] != 'a' || path[pathSize - 7] != 't' || path[pathSize - 6] != 'i' || path[pathSize - 5] != 'o' || path[pathSize - 4] != 'n')
     {
-        SetColor(12, 0);
-        cout << "Error: name file" << endl;
-        SetColor(7, 0);
+        printError("Error: name file");
         return -1;
     }
     else
         fileRead(path, commands);
     if (commands.size() == 0)
     {
-        SetColor(12, 0);
-        cout << "Error: No commands" << endl;
-        SetColor(7, 0);
+        printError("Error: No commands");
         return 0;
     }
     string bg = commands[0];
@@ -72,9 +64,7 @@ int main(int argc, char *argv[])
                     empty_rectangular(field, c, y, x, height, width);
                 else
                 {
-                    SetColor(12, 0);
-                    cout << "Error: Not enough space" << endl;
-                    SetColor(7, 0);
+                    printError("Error: Not enough space");
                     return -1;
                 }
             }
@@ -87,9 +77,7 @@ int main(int argc, char *argv[])
                     filled_rectangular(field, c, y, x, height, width);
                 else
                 {
-                    SetColor(12, 0);
-                    cout << "Error: Not enough space" << endl;
-                    SetColor(7, 0);
+                    printError("Error: Not enough space");
                     return -1;
                 }
             }
@@ -102,9 +90,7 @@ int main(int argc, char *argv[])
                     empty_circle(field, x, y, radius, c);
                 else
                 {
-                    SetColor(12, 0);
-                    cout << "Error: Not enough space" << endl;
-                    SetColor(7, 0);
+                    printError("Error: Not enough space");
                     return -1;
                 }
             }
@@ -117,9 +103,7 @@ int main(int argc, char *argv[])
                     filled_circle(field, x, y, radius, c);
                 else
                 {
-                    SetColor(12, 0);
-                    cout << "Error: Not enough space" << endl;
-                    SetColor(7, 0);
+                    printError("Error: Not enough space");
                     return -1;
                 }
             }
@@ -132,9 +116,7 @@ int main(int argc, char *argv[])
                     line(field, x, y, y1, x1, c);
                 else
                 {
-                    SetColor(12, 0);
-                    cout << "Error: Not enough space" << endl;
-                    SetColor(7, 0);
+                    printError("Error: Not enough space");
                     return -1;
                 }  
             }

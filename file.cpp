@@ -9,10 +9,7 @@ void fileRead(string path, vector <string>& commands) {
 			commands.push_back(tmp);
 		}
 	}
-	else {
-		SetColor(12, 0);
-		cout << "Error: Operation file corrupted" << endl;
-		SetColor(7, 0);
-	}
+	else
+		printError("Error: Operation file corrupted");
 	file.close();
 }
