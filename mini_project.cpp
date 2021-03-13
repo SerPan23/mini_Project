@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
     }
     if (argc == 1)
     {
-        //path = "H:\\Codes\\с++_school\\mini_Project\\operation.it";
-        path = "D:\\Code\\CPP\\Hometask\\miniproject\\mini_Project\\operation.it"; 
+        path = "H:\\Codes\\с++_school\\mini_Project\\operation.it";
+        //path = "D:\\Code\\CPP\\Hometask\\miniproject\\mini_Project\\operation.it"; 
         //cout << "Write the path to the file:" << endl;
         //cin >> path;
     }
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
             {
                 // Empty Rectangular
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), width = str_to_int(args[3]), height = str_to_int(args[4]);
-                char c = args[0][0];
+                char c = args[5][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, width, height, c))
                     empty_rectangular(field, c, y, x, height, width);
                 else
@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
             {
                 // Fileld Rectangular
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), width = str_to_int(args[3]), height = str_to_int(args[4]);
-                char c = args[0][0];
+                char c = args[5][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, width, height, c))
                     filled_rectangular(field, c, y, x, height, width);
                 else
@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
             {
                 // Empty Circle
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), radius = str_to_int(args[3]);
-                char c = args[0][0];
+                char c = args[4][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, radius)) 
                     empty_circle(field, x, y, radius, c);
                 else
@@ -112,7 +112,7 @@ int main(int argc, char *argv[])
             {
                 // Filled Circle
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), radius = str_to_int(args[3]);
-                char c = args[0][0];
+                char c = args[4][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, radius))
                     filled_circle(field, x, y, radius, c);
                 else
@@ -127,7 +127,7 @@ int main(int argc, char *argv[])
             {
                 // Line
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), x1 = str_to_int(args[3]), y1 = str_to_int(args[4]);
-                char c = args[0][0];
+                char c = args[5][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, x1, y1))
                     line(field, x, y, y1, x1, c);
                 else

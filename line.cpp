@@ -36,10 +36,10 @@ int line(vector <vector <char>>& field, int xa, int ya, int xb, int yb, char c) 
 	const int signX = xa < xb ? 1 : -1;
 	const int signY = ya < yb ? 1 : -1;
 	int error = deltaX - deltaY;
-	field[xb][yb] = '*';
+	field[xb][yb] = c;
 	while (xa != xb || ya != yb)
 	{
-		field[xa][ya] = '*';
+		field[xa][ya] = c;
 		int error2 = error * 2;
 		if (error2 > -deltaY)
 		{
