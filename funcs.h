@@ -20,6 +20,8 @@ void swap(int& a, int& b);
 int str_to_int(string str);
 void command_parser(vector <string>& args, string command);
 void SetColor(int text, int bg);
+int my_abs(int a);
+double my_abs(double a);
 bool fitsField(int width, int height, int x1, int y1, int x2, int y2);
 bool fitsField(int width, int height, int x1, int y1, int xl, int yl, char c);
 bool fitsField(int width, int height, int x, int y, int r);

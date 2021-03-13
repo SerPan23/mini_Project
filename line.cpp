@@ -1,6 +1,7 @@
 #include <cmath>
 #include <iostream>
 #include <vector>
+#include "funcs.h"
 
 using namespace std;
 
@@ -30,8 +31,8 @@ int line(vector <vector <char>>& field, int xa, int ya, int xb, int yb, char c) 
 	else if (ya == yb) {
 		horizontal(field, xa, xa-xb, c);
 	}*/
-	const int deltaX = abs(xb - xa);
-	const int deltaY = abs(yb - ya);
+	const int deltaX = my_abs(xb - xa);
+	const int deltaY = my_abs(yb - ya);
 	const int signX = xa < xb ? 1 : -1;
 	const int signY = ya < yb ? 1 : -1;
 	int error = deltaX - deltaY;

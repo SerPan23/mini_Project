@@ -6,12 +6,12 @@ void swap(int& a, int& b) {
 	a = temp;
 }
 
-int abs(int a) {
+int my_abs(int a) {
     if (a < 0) return -a;
     return a;
 }
 
-double abs(double a) {
+double my_abs(double a) {
     if (a < 0) return -a;
     return a;
 }
