@@ -3,22 +3,28 @@
 int main(int argc, char *argv[])
 {
     int fieldWidth, fieldHeight;
+    bool needSave = false;
     string path;
     vector <string> commands, bgargs;
-    if (argc > 2)
+    if (argc == 3 && (argv[2][0] == '-' && argv[2][1] == '-' && argv[2][2] == 's' && argv[2][3] == 'a' && argv[2][4] == 'v' && argv[2][5] == 'e'))
+    {
+        path = argv[1];
+        needSave = true;
+    }
+    else if (argc > 2 && argv[2] != "--save")
     {
         printError("Error: a lot of arguments");
         return -1;
     }
-    if (argc == 1)
+    else if (argc == 2)
+        path = argv[1];
+    else
     {
         path = "H:\\Codes\\с++_school\\mini_Project\\operation.it";
         //path = "D:\\Code\\CPP\\Hometask\\miniproject\\mini_Project\\operation.it"; 
         //cout << "Write the path to the file:" << endl;
         //cin >> path;
     }
-    else
-        path = argv[1];
 
     int pathSize = path.size();
     if (path[pathSize - 2] != 'i' || path[pathSize - 1] != 't')
@@ -129,4 +135,6 @@ int main(int argc, char *argv[])
         }
         cout << endl;
     }
+    if (needSave)
+        savePicture(field, path);
 }

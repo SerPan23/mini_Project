@@ -29,4 +29,7 @@ void printError(string error);
 
 /* Функции работы с файлами */
 void fileRead(string path, vector <string>& commands);
+void fileWrite(string value, string path);
+void fileClear(string path);
+void savePicture(vector<vector<char>>& field, string path);
 #endif

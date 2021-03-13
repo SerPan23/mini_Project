@@ -148,6 +148,7 @@
     <ClCompile Include="functions.cpp" />
     <ClCompile Include="line.cpp" />
     <ClCompile Include="mini_project.cpp" />
+    <ClCompile Include="savePicture.cpp" />
     <ClCompile Include="set_color.cpp" />
   </ItemGroup>
   <ItemGroup>
