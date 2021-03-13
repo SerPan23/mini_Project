@@ -12,7 +12,7 @@ void printar(vector <vector <char>> field) {
 	cout << endl;
 }
 
-void filled_circle(vector <vector <char>>& field, int x0, int y0, int radius, char c) {
+int filled_circle(vector <vector <char>>& field, int x0, int y0, int radius, char c) {
 	int x = 0;
 	int y = radius;
 	int delta = 1 - 2 * radius;
@@ -46,5 +46,5 @@ void filled_circle(vector <vector <char>>& field, int x0, int y0, int radius, ch
 		delta += 2 * (x - y);
 		--y;
 	}
-	
+	return 1;
 }

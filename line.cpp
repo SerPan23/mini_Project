@@ -4,21 +4,21 @@
 
 using namespace std;
 
-void horizontal(vector <vector <char>>& field, int x, int length, char c) {
-	for (int i = 0; i < length; i++)
-	{
-		field[x][i] = c;
-	}
-}
+//void horizontal(vector <vector <char>>& field, int x, int length, char c) {
+//	for (int i = 0; i < length; i++)
+//	{
+//		field[x][i] = c;
+//	}
+//}
+//
+//void vertical(vector <vector <char>>& field, int y, int length, char c) {
+//	for (int i = y; i < length; i++)
+//	{
+//		field[i][y] = c;
+//	}
+//}
 
-void vertical(vector <vector <char>>& field, int y, int length, char c) {
-	for (int i = y; i < length; i++)
-	{
-		field[i][y] = c;
-	}
-}
-
-void line(vector <vector <char>>& field, int xa, int ya, int xb, int yb, char c) {
+int line(vector <vector <char>>& field, int xa, int ya, int xb, int yb, char c) {
 	if (xa > xb && ya > yb) {
 		swap(xa, xb);
 		swap(ya, yb);
@@ -51,5 +51,7 @@ void line(vector <vector <char>>& field, int xa, int ya, int xb, int yb, char c)
 			ya += signY;
 		}
 	}
+
+	return 1;
 	
 }

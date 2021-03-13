@@ -1,5 +1,5 @@
 #include "funcs.h"
-void background(vector <vector <char>>& field, int w, int h, char c)
+int background(vector <vector <char>>& field, int w, int h, char c)
 {
 	for (int i = 0; i < h; i++)
 	{
@@ -8,4 +8,5 @@ void background(vector <vector <char>>& field, int w, int h, char c)
 			field[i][j] = c;
 		}
 	}
+	return 1;
 }

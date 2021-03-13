@@ -6,6 +6,16 @@ void swap(int& a, int& b) {
 	a = temp;
 }
 
+int abs(int a) {
+    if (a < 0) return -a;
+    return a;
+}
+
+double abs(double a) {
+    if (a < 0) return -a;
+    return a;
+}
+
 int str_to_int(string str)
 {
     int otv = 0, i = 0;

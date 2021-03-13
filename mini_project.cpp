@@ -13,7 +13,8 @@ int main(int argc, char *argv[])
     }
     if (argc == 1)
     {
-        path = "H:\\Codes\\с++_school\\mini_Project\\operation.it";
+        //path = "H:\\Codes\\с++_school\\mini_Project\\operation.it";
+        path = "D:\\Code\\CPP\\Hometask\\miniproject\\mini_Project\\operation.it"; 
         //cout << "Write the path to the file:" << endl;
         //cin >> path;
     }
@@ -87,7 +88,7 @@ int main(int argc, char *argv[])
             {
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), x1 = str_to_int(args[3]), y1 = str_to_int(args[4]);
                 char c = args[0][0];
-                line(field, x, y, x1, y1, c);
+                line(field, x, y, y1, x1, c);
             }
         }
     for (int i = 0; i < h; i++)
