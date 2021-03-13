@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), width = str_to_int(args[3]), height = str_to_int(args[4]);
                 char c = args[0][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, width, height, c))
-                    empty_rectangular(field, c, x, y, width, height);
+                    empty_rectangular(field, c, y, x, height, width);
                 else
                 {
                     SetColor(12, 0);
@@ -84,7 +84,7 @@ int main(int argc, char *argv[])
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), width = str_to_int(args[3]), height = str_to_int(args[4]);
                 char c = args[0][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, width, height, c))
-                    filled_rectangular(field, c, x, y, width, height);
+                    filled_rectangular(field, c, y, x, height, width);
                 else
                 {
                     SetColor(12, 0);
