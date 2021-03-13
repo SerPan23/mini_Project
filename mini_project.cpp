@@ -2,6 +2,7 @@
 
 int main(int argc, char *argv[])
 {
+    int fieldWidth, fieldHeight;
     string path;
     vector <string> commands, bgargs;
     if (argc > 2)
@@ -51,6 +52,8 @@ int main(int argc, char *argv[])
     char c = bgargs[2][0];
     vector<vector<char>> field(h, vector<char>(w));
     background(field, w, h, c);
+    fieldWidth = w;
+    fieldHeight = h;
     
     
     if(commands.size() > 1)
@@ -62,33 +65,55 @@ int main(int argc, char *argv[])
             cout << command << endl;
             if (command[0] == 'r')
             {
+                // Empty Rectangular
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), width = str_to_int(args[3]), height = str_to_int(args[4]);
                 char c = args[0][0];
-                empty_rectangular(field, c, x, y, width, height);
+                if (fitsField(fieldWidth, fieldHeight, x, y, width, height, c))
+                    empty_rectangular(field, c, x, y, width, height);
+                else 
+                    cout << "Error: Not enough space" << endl;
             }
             else if (command[0] == 'R')
             {
+                // Fileld Rectangular
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), width = str_to_int(args[3]), height = str_to_int(args[4]);
                 char c = args[0][0];
-                filled_rectangular(field, c, x, y, width, height);
+                if (fitsField(fieldWidth, fieldHeight, x, y, width, height, c))
+                    filled_rectangular(field, c, x, y, width, height);
+                else 
+                    cout << "Error: Not enough space" << endl;
             }
             else if (command[0] == 'c')
             {
+                // Empty Circle
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), radius = str_to_int(args[3]);
                 char c = args[0][0];
-                empty_circle(field, x, y, radius, c);
+                if (fitsField(fieldWidth, fieldHeight, x, y, radius)) 
+                    empty_circle(field, x, y, radius, c);
+                else
+                    cout << "Error: Not enough space" << endl;
             }
             else if (command[0] == 'C')
             {
+                // Filled Circle
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), radius = str_to_int(args[3]);
                 char c = args[0][0];
-                filled_circle(field, x, y, radius, c);
+                if (fitsField(fieldWidth, fieldHeight, x, y, radius))
+                    filled_circle(field, x, y, radius, c);
+                else 
+                    cout << "Error: Not enough space" << endl;
             }
             else if (command[0] == 'L')
             {
+                // Line
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), x1 = str_to_int(args[3]), y1 = str_to_int(args[4]);
                 char c = args[0][0];
-                line(field, x, y, y1, x1, c);
+                if (fitsField(fieldWidth, fieldHeight, x, y, x1, y1))
+                    line(field, x, y, y1, x1, c);
+                else 
+                    cout << "Error: Not enough space" << endl;
+                
+                
             }
         }
     for (int i = 0; i < h; i++)
