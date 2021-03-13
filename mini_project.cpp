@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
                     SetColor(12, 0);
                     cout << "Error: Not enough space" << endl;
                     SetColor(7, 0);
-                    return 0;
+                    return -1;
                 }
             }
             else if (command[0] == 'R')
@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
                     SetColor(12, 0);
                     cout << "Error: Not enough space" << endl;
                     SetColor(7, 0);
-                    return 0;
+                    return -1;
                 }
             }
             else if (command[0] == 'c')
@@ -105,7 +105,7 @@ int main(int argc, char *argv[])
                     SetColor(12, 0);
                     cout << "Error: Not enough space" << endl;
                     SetColor(7, 0);
-                    return 0;
+                    return -1;
                 }
             }
             else if (command[0] == 'C')
@@ -120,7 +120,7 @@ int main(int argc, char *argv[])
                     SetColor(12, 0);
                     cout << "Error: Not enough space" << endl;
                     SetColor(7, 0);
-                    return 0;
+                    return -1;
                 }
             }
             else if (command[0] == 'L')
@@ -135,7 +135,7 @@ int main(int argc, char *argv[])
                     SetColor(12, 0);
                     cout << "Error: Not enough space" << endl;
                     SetColor(7, 0);
-                    return 0;
+                    return -1;
                 }  
             }
         }
