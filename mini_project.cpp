@@ -70,8 +70,13 @@ int main(int argc, char *argv[])
                 char c = args[0][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, width, height, c))
                     empty_rectangular(field, c, x, y, width, height);
-                else 
+                else
+                {
+                    SetColor(12, 0);
                     cout << "Error: Not enough space" << endl;
+                    SetColor(7, 0);
+                    return 0;
+                }
             }
             else if (command[0] == 'R')
             {
@@ -80,8 +85,13 @@ int main(int argc, char *argv[])
                 char c = args[0][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, width, height, c))
                     filled_rectangular(field, c, x, y, width, height);
-                else 
+                else
+                {
+                    SetColor(12, 0);
                     cout << "Error: Not enough space" << endl;
+                    SetColor(7, 0);
+                    return 0;
+                }
             }
             else if (command[0] == 'c')
             {
@@ -91,7 +101,12 @@ int main(int argc, char *argv[])
                 if (fitsField(fieldWidth, fieldHeight, x, y, radius)) 
                     empty_circle(field, x, y, radius, c);
                 else
+                {
+                    SetColor(12, 0);
                     cout << "Error: Not enough space" << endl;
+                    SetColor(7, 0);
+                    return 0;
+                }
             }
             else if (command[0] == 'C')
             {
@@ -100,8 +115,13 @@ int main(int argc, char *argv[])
                 char c = args[0][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, radius))
                     filled_circle(field, x, y, radius, c);
-                else 
+                else
+                {
+                    SetColor(12, 0);
                     cout << "Error: Not enough space" << endl;
+                    SetColor(7, 0);
+                    return 0;
+                }
             }
             else if (command[0] == 'L')
             {
@@ -110,10 +130,13 @@ int main(int argc, char *argv[])
                 char c = args[0][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, x1, y1))
                     line(field, x, y, y1, x1, c);
-                else 
+                else
+                {
+                    SetColor(12, 0);
                     cout << "Error: Not enough space" << endl;
-                
-                
+                    SetColor(7, 0);
+                    return 0;
+                }  
             }
         }
     for (int i = 0; i < h; i++)
