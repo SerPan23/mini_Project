@@ -46,17 +46,17 @@ void command_parser(vector <string>& args, string command)
     }
 }
 
-bool fitsField(int width, int height, int x1, int y1, int x2, int y2) {
+bool fitsField(int width, int height, int x1, int y1, int x2, int y2, char c) {
     bool alpha, betta;
     alpha = (x1 <= width) && (x2 <= width);
     betta = (y1 <= height) && (y2 <= height);
     return alpha * betta;
 }
 
-bool fitsField(int width, int height, int x1, int y1, int xl, int yl, char c) {
+bool fitsField(int width, int height, int x1, int y1, int x2, int y2) {
     bool alpha, betta;
-    alpha = (x1 <= width) * ((x1 + xl) <= width);
-    betta = (y1 <= height) * (y1 + yl <= height);
+    alpha = (x1 < width) * ((x1 + x2) < width);
+    betta = (y1 < height) * (y1 + y2 < height);
     return alpha * betta;
 }
 
