@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="background.cpp" />
+    <ClCompile Include="checkCommandForCorrect.cpp" />
     <ClCompile Include="coloredPrints.cpp" />
     <ClCompile Include="empty_circle.cpp" />
     <ClCompile Include="empty_rectangular.cpp" />

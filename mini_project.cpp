@@ -79,6 +79,8 @@ int main(int argc, char *argv[])
             else if (command[0] == 'R')
             {
                 // Fileld Rectangular
+                if (!checkCommandForCorrect(args))
+                    return -1;
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), width = str_to_int(args[3]), height = str_to_int(args[4]);
                 char c = args[5][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, width, height, c))
@@ -92,6 +94,8 @@ int main(int argc, char *argv[])
             else if (command[0] == 'c')
             {
                 // Empty Circle
+                if (!checkCommandForCorrect(args))
+                    return -1;
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), radius = str_to_int(args[3]);
                 char c = args[4][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, radius)) 
@@ -105,6 +109,8 @@ int main(int argc, char *argv[])
             else if (command[0] == 'C')
             {
                 // Filled Circle
+                if (!checkCommandForCorrect(args))
+                    return -1;
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), radius = str_to_int(args[3]);
                 char c = args[4][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, radius))
@@ -118,6 +124,8 @@ int main(int argc, char *argv[])
             else if (command[0] == 'L')
             {
                 // Line
+                if (!checkCommandForCorrect(args))
+                    return -1;
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), x1 = str_to_int(args[3]), y1 = str_to_int(args[4]);
                 char c = args[5][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, x1, y1))
