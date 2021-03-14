@@ -20,8 +20,8 @@ int main(int argc, char *argv[])
         path = argv[1];
     else
     {
-        //path = "H:\\Codes\\с++_school\\mini_Project\\operation.it";
-        path = "D:\\Code\\CPP\\Hometask\\miniproject\\mini_Project\\operation.it"; 
+        path = "H:\\Codes\\с++_school\\mini_Project\\operation.it";
+        //path = "D:\\Code\\CPP\\Hometask\\miniproject\\mini_Project\\operation.it"; 
         //cout << "Write the path to the file:" << endl;
         //cin >> path;
     }

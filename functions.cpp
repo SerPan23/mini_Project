@@ -66,10 +66,3 @@ bool fitsField(int width, int height, int x, int y, int r) {
     betta = (y + r <= height) && (y - r >= 0);
     return alpha * betta;
 }
-
-void printError(string error)
-{
-    SetColor(12, 0);
-    cout << error << endl;
-    SetColor(7, 0);
-}

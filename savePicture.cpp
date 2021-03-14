@@ -13,4 +13,5 @@ void savePicture(vector<vector<char>>& field, string path)
 			value += tmp[j];
 		fileWrite(value, folderpath + filename);
 	}
+	printSuccess("File saved");
 }
