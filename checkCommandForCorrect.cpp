@@ -11,7 +11,7 @@ bool ifArgNumber(string arg)
 
 bool checkCommandForCorrect(vector <string>& args)
 {
-    if (args[0] == "r" || args[0] == "R" || args[0] == "L")
+    if (args[0] == "r" || args[0] == "R")
     {
         if (args.size() > 6 || args.size() < 6)
         {
@@ -23,7 +23,30 @@ bool checkCommandForCorrect(vector <string>& args)
             printError("Error: Uncorrect number");
             return 0;
         }
-        if ( (str_to_int(args[1]) < 0) || (str_to_int(args[2]) < 0) || (str_to_int(args[3]) < 0) || (str_to_int(args[4]) < 0))
+        if ( (str_to_int(args[1]) < 0) || (str_to_int(args[2]) < 0) || (str_to_int(args[3]) <= 0) || (str_to_int(args[4]) <= 0))
+        {
+            printError("Error: Uncorrect number");
+            return 0;
+        }
+    }
+    else if (args[0] == "L")
+    {
+        if (args.size() > 6 || args.size() < 6)
+        {
+            printError("Error: Uncorrect command");
+            return 0;
+        }
+        if (!(ifArgNumber(args[1]) && ifArgNumber(args[2]) && ifArgNumber(args[3]) && ifArgNumber(args[4])))
+        {
+            printError("Error: Uncorrect number");
+            return 0;
+        }
+        if ((str_to_int(args[1]) == 0) && (str_to_int(args[2]) == 0) && (str_to_int(args[3]) == 0) && (str_to_int(args[4]) == 0))
+        {
+            printError("Error: Uncorrect number");
+            return 0;
+        }
+        if ((str_to_int(args[1]) < 0) || (str_to_int(args[2]) < 0) || (str_to_int(args[3]) < 0) || (str_to_int(args[4]) < 0))
         {
             printError("Error: Uncorrect number");
             return 0;
