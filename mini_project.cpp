@@ -50,6 +50,11 @@ int main(int argc, char *argv[])
         return -1;
     int w = str_to_int(bgargs[0]), h = str_to_int(bgargs[1]);
     char c = bgargs[2][0];
+    if ((w <= 0 || w > 300) || (h <= 0 || h > 300))
+    {
+        printError("Error: Uncorrect background size");
+        return -1;
+    }
     vector<vector<char>> field(h, vector<char>(w));
     background(field, w, h, c);
     fieldWidth = w;
