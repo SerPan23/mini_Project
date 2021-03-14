@@ -64,6 +64,8 @@ int main(int argc, char *argv[])
             if (command[0] == 'r')
             {
                 // Empty Rectangular
+                if (!checkCommandForCorrect(args))
+                    return -1;
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), width = str_to_int(args[3]), height = str_to_int(args[4]);
                 char c = args[5][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, width, height, c))
@@ -125,6 +127,11 @@ int main(int argc, char *argv[])
                     printError("Error: Not enough space");
                     return -1;
                 }  
+            }
+            else
+            {
+                printError("Error: Uncorrect command");
+                return -1;
             }
         }
     for (int i = 0; i < h; i++)

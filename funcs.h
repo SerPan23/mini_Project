@@ -25,6 +25,7 @@ double my_abs(double a);
 bool fitsField(int width, int height, int x1, int y1, int x2, int y2);
 bool fitsField(int width, int height, int x1, int y1, int x2, int y2, char c);
 bool fitsField(int width, int height, int x, int y, int r);
+bool checkCommandForCorrect(vector <string>& args)
 
 /* Функции вывода */
 void printError(string error);
