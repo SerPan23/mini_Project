@@ -20,8 +20,8 @@ int main(int argc, char *argv[])
         path = argv[1];
     else
     {
-        path = "H:\\Codes\\с++_school\\mini_Project\\operation.it";
-        //path = "D:\\Code\\CPP\\Hometask\\miniproject\\mini_Project\\operation.it"; 
+        //path = "H:\\Codes\\с++_school\\mini_Project\\operation.it";
+        path = "D:\\Code\\CPP\\Hometask\\miniproject\\mini_Project\\operation.it"; 
         //cout << "Write the path to the file:" << endl;
         //cin >> path;
     }
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), width = str_to_int(args[3]), height = str_to_int(args[4]);
                 char c = args[5][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, width, height, c))
-                    empty_rectangular(field, c, y, x, height, width);
+                    empty_rectangular(field, c, x, y, width, height);
                 else
                 {
                     printError("Error: Not enough space");
@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), width = str_to_int(args[3]), height = str_to_int(args[4]);
                 char c = args[5][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, width, height, c))
-                    filled_rectangular(field, c, y, x, height, width);
+                    filled_rectangular(field, c, x, y, width, height);
                 else
                 {
                     printError("Error: Not enough space");
@@ -119,7 +119,7 @@ int main(int argc, char *argv[])
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), x1 = str_to_int(args[3]), y1 = str_to_int(args[4]);
                 char c = args[5][0];
                 if (fitsField(fieldWidth, fieldHeight, x, y, x1, y1))
-                    line(field, x, y, y1, x1, c);
+                    line(field, x, y, x1, y1, c);
                 else
                 {
                     printError("Error: Not enough space");
@@ -129,7 +129,7 @@ int main(int argc, char *argv[])
         }
     for (int i = 0; i < h; i++)
     {
-        for (int j = 0; j < w; j++)
+        for (int j = 0; j < w ; j++)
         {
             cout << field[i][j] << " ";
         }
