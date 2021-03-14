@@ -13,7 +13,20 @@ int empty_rectangular(vector <vector <char>>& field, char r, int x, int y, int w
 	//  |     |
 	//  *-----*
 	//     4*/
-
+	
+	for (int i = 0; i < height; i++)
+	{
+		for (int j = 0; j < width; j++)
+		{
+			if(i == 0 || i == height-1)
+				field[y + i][x + j] = r;
+			else
+			{
+				field[y + i][x] = r;
+				field[y + i][x + width-1] = r;
+			}
+		}
+	}
 
 	return 1;
 }
