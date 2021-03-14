@@ -21,9 +21,9 @@ int empty_circle(vector <vector <char>>& field, int x0, int y0, int radius, char
 			delta += 1 - 2 * y;
 			continue;
 		}
-		++x;
+		x++;
 		delta += 2 * (x - y);
-		--y;
+		y--;
 	}
 	return 1;
 }

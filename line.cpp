@@ -59,6 +59,11 @@ using namespace std;
 
 int line(vector <vector <char>>& field, int x0, int y0, int x1, int y1, char c)
 {
+	if (x0 > x1 && y0 > y1) {
+		swap(x0, x1);
+		swap(y0, y1);
+	}
+
 	int A, B, sign;
 	A = y1 - y0;
 	B = x0 - x1;
