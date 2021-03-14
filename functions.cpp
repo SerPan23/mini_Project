@@ -35,7 +35,7 @@ void command_parser(vector <string>& args, string command)
     string tmp;
     for (int i = 0; i <= command.size(); i++)
     {
-        if (command[i] == ' ' || command[i] == '\0')
+        if ((command[i] == ' ' || command[i] == '\0') && tmp.size() > 0)
         {
             args.push_back(tmp);
             tmp = "";
