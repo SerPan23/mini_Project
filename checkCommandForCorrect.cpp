@@ -37,6 +37,19 @@ bool checkCommandForCorrect(vector <string>& args)
             return 0;
         }
     }
+    else
+    {
+        if (args.size() > 3 || args.size() < 3)
+        {
+            printError("Error: Uncorrect command");
+            return 0;
+        }
+        if (!(ifArgNumber(args[0]) && ifArgNumber(args[1])))
+        {
+            printError("Error: Uncorrect command");
+            return 0;
+        }
+    }
 
     return 1;
 }

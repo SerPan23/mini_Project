@@ -46,6 +46,8 @@ int main(int argc, char *argv[])
     }
     string bg = commands[0];
     command_parser(bgargs, bg);
+    if (!checkCommandForCorrect(bgargs))
+        return -1;
     int w = str_to_int(bgargs[0]), h = str_to_int(bgargs[1]);
     char c = bgargs[2][0];
     vector<vector<char>> field(h, vector<char>(w));
