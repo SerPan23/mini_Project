@@ -17,7 +17,7 @@ int filled_circle(vector <vector <char>>& field, int x0, int y0, int radius, cha
 	int y = radius;
 	int delta = 1 - 2 * radius;
 	int error = 0;
-	while (y >= 0) {
+	while (y > 0) {
 		
 		for (int i = x0-x; i <= x0+x; i++)
 		{
