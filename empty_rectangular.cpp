@@ -30,3 +30,29 @@ int empty_rectangular(vector <vector <char>>& field, char r, int x, int y, int w
 
 	return 1;
 }
+
+int empty_rectangular(vector <vector <char>>& field, char r, int x, int y, int width, int height, int color, vector <vector <int>>& colorsfield)
+{
+	for (int i = 0; i < height; i++)
+	{
+		for (int j = 0; j < width; j++)
+		{
+			if (i == 0 || i == height - 1)
+			{
+				field[y + i][x + j] = r;
+
+				colorsfield[y + i][x + j] = color;
+			}
+			else
+			{
+				field[y + i][x] = r;
+				field[y + i][x + width - 1] = r;
+
+				colorsfield[y + i][x] = color;
+				colorsfield[y + i][x + width - 1] = color;
+			}
+		}
+	}
+
+	return 1;
+}

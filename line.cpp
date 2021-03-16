@@ -105,3 +105,57 @@ int line(vector <vector <char>>& field, int x0, int y0, int x1, int y1, char c)
 
 	return 1;
 }
+
+
+int line(vector <vector <char>>& field, int x0, int y0, int x1, int y1, char c, int color, vector <vector <int>>& colorsfield)
+{
+	if (x0 > x1 && y0 > y1) {
+		swap(x0, x1);
+		swap(y0, y1);
+	}
+
+	int A, B, sign;
+	A = y1 - y0;
+	B = x0 - x1;
+	if (my_abs(A) > my_abs(B)) sign = 1;
+	else sign = -1;
+	int signa, signb;
+	if (A < 0) signa = -1;
+	else signa = 1;
+	if (B < 0) signb = -1;
+	else signb = 1;
+	int f = 0;
+	field[y0][x0] = c;
+
+	colorsfield[y0][x0] = color;
+	int x = x0, y = y0;
+	if (sign == -1)
+	{
+		do {
+			f += A * signa;
+			if (f > 0)
+			{
+				f -= B * signb;
+				y += signa;
+			}
+			x -= signb;
+			field[y][x] = c;
+			colorsfield[y][x] = color;
+		} while (x != x1 || y != y1);
+	}
+	else
+	{
+		do {
+			f += B * signb;
+			if (f > 0) {
+				f -= A * signa;
+				x -= signb;
+			}
+			y += signa;
+			field[y][x] = c;
+			colorsfield[y][x] = color;
+		} while (x != x1 || y != y1);
+	}
+
+	return 1;
+}

@@ -8,12 +8,18 @@
 using namespace std;
 
 /* Функции рисования */
-int background(vector <vector <char>>& field, int w, int h, char c);
+int background(vector <vector <char>>& field, int w, int h, char c, vector <vector <int>>& colorsfield);
 int empty_circle(vector <vector <char>>& field, int x0, int y0, int radius, char c);
 int empty_rectangular(vector <vector <char>>& field, char r, int x, int y, int width, int height);
 int filled_circle(vector <vector <char>>& field, int x0, int y0, int radius, char c);
 int filled_rectangular(vector <vector <char>>& field, char r, int x, int y, int width, int height);
 int line(vector <vector <char>>& field, int xa, int ya, int xb, int yb, char c);
+
+int empty_circle(vector <vector <char>>& field, int x0, int y0, int radius, char c, int color, vector <vector <int>>& colorsfield);
+int empty_rectangular(vector <vector <char>>& field, char r, int x, int y, int width, int height, int color, vector <vector <int>>& colorsfield);
+int filled_circle(vector <vector <char>>& field, int x0, int y0, int radius, char c, int color, vector <vector <int>>& colorsfield);
+int filled_rectangular(vector <vector <char>>& field, char r, int x, int y, int width, int height, int color, vector <vector <int>>& colorsfield);
+int line(vector <vector <char>>& field, int xa, int ya, int xb, int yb, char c, int color, vector <vector <int>>& colorsfield);
 
 /* Наши функции */
 void swap(int& a, int& b);

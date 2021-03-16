@@ -39,3 +39,54 @@ int empty_circle(vector <vector <char>>& field, int x0, int y0, int radius, char
 
 	return 1;
 }
+
+int empty_circle(vector <vector <char>>& field, int x0, int y0, int radius, char c, int color, vector <vector <int>>& colorsfield) {
+	int x = 0;
+	int y = radius;
+	int delta = 1 - 2 * radius;
+	int error = 0;
+
+	if (radius == 2) {
+		field[x0 + radius][y0] = c;
+		field[x0 - radius][y0] = c;
+		colorsfield[x0 + radius][y0] = color;
+		colorsfield[x0 - radius][y0] = color;
+	}
+	else {
+		field[x0 + radius + 1][y0] = c;
+		field[x0 - radius - 1][y0] = c;
+
+		colorsfield[x0 + radius + 1][y0] = color;
+		colorsfield[x0 - radius - 1][y0] = color;
+	}
+
+	while (y > 0) {
+		field[x0 + x][y0 + y] = c;
+		field[x0 + x][y0 - y] = c;
+		field[x0 - x][y0 + y] = c;
+		field[x0 - x][y0 - y] = c;
+
+		colorsfield[x0 + x][y0 + y] = color;
+		colorsfield[x0 + x][y0 - y] = color;
+		colorsfield[x0 - x][y0 + y] = color;
+		colorsfield[x0 - x][y0 - y] = color;
+		error = 2 * (delta + y) - 1;
+		if (delta < 0 && error <= 0) {
+			++x;
+			delta += 2 * x + 1;
+			continue;
+		}
+		error = 2 * (delta - x) - 1;
+		if (delta > 0 && error > 0) {
+			--y;
+			delta += 1 - 2 * y;
+			continue;
+		}
+		x++;
+		delta += 2 * (x - y);
+		y--;
+	}
+
+
+	return 1;
+}

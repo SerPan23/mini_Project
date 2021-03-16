@@ -19,3 +19,16 @@ int filled_rectangular(vector <vector <char>>& field, char r, int x, int y, int 
 	}
 	return 1;
 }
+
+int filled_rectangular(vector <vector <char>>& field, char r, int x, int y, int width, int height, int color, vector <vector <int>>& colorsfield) {
+	for (int i = 0; i < height; i++)
+	{
+		for (int j = 0; j < width; j++)
+		{
+			field[y + i][x + j] = r;
+
+			colorsfield[y + i][x + j] = color;
+		}
+	}
+	return 1;
+}
