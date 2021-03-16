@@ -22,13 +22,18 @@ int main(int argc, char *argv[])
     else
     {
         //path = "H:\\Codes\\с++_school\\mini_Project\\operation.it";
-        path = "D:\\Code\\CPP\\Hometask\\miniproject\\mini_Project\\operation.it"; 
+        //path = "D:\\Code\\CPP\\Hometask\\miniproject\\mini_Project\\operation.it"; 
         //path = "D:\\Code\\C++\\gitp\\mini_Project\\operation.it";
-        //cout << "Write the path to the file:" << endl;
-        //cin >> path;
-    }
-
+        cout << "Write the path to the file:" << endl;
+        cin >> path;
+        cout << endl;
+    }  
     int pathSize = path.size();
+    if (pathSize < 12)
+    {
+        printError("Error: Operation file corrupted");
+        return -1;
+    }
     if (path[pathSize - 2] != 'i' || path[pathSize - 1] != 't')
     {
         printError("Error: Operation file has not correct extension");
