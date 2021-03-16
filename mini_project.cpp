@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
     if (!checkCommandForCorrect(bgargs))
         return -1;
     int w = str_to_int(bgargs[0]), h = str_to_int(bgargs[1]);
-    char c = bgargs[2][0];
+    char bgc = bgargs[2][0];
     if ((w <= 0 || w > 300) || (h <= 0 || h > 300))
     {
         printError("Error: Uncorrect background size");
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
     }
     vector<vector<char>> field(h, vector<char>(w));
     vector<vector<int>> colorsfield(h, vector<int>(w));
-    background(field, w, h, c, colorsfield);
+    background(field, w, h, bgc, colorsfield);
     fieldWidth = w;
     fieldHeight = h;
     
@@ -78,6 +78,8 @@ int main(int argc, char *argv[])
                     return -1;
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), width = str_to_int(args[3]), height = str_to_int(args[4]);
                 char c = args[5][0];
+                if (c == bgc)
+                    changeSymbol(c, command);
                 int color = -1;
                 if(args.size() == 7)
                     color = str_to_int(args[6]);
@@ -101,6 +103,8 @@ int main(int argc, char *argv[])
                     return -1;
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), width = str_to_int(args[3]), height = str_to_int(args[4]);
                 char c = args[5][0];
+                if (c == bgc)
+                    changeSymbol(c, command);
                 int color = -1;
                 if (args.size() == 7)
                     color = str_to_int(args[6]);
@@ -124,6 +128,8 @@ int main(int argc, char *argv[])
                     return -1;
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), radius = str_to_int(args[3]);
                 char c = args[4][0];
+                if (c == bgc)
+                    changeSymbol(c, command);
                 int color = -1;
                 if (args.size() == 6)
                     color = str_to_int(args[5]);
@@ -147,6 +153,8 @@ int main(int argc, char *argv[])
                     return -1;
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), radius = str_to_int(args[3]);
                 char c = args[4][0];
+                if (c == bgc)
+                    changeSymbol(c, command);
                 int color = -1;
                 if (args.size() == 6)
                     color = str_to_int(args[5]);
@@ -170,6 +178,8 @@ int main(int argc, char *argv[])
                     return -1;
                 int x = str_to_int(args[1]), y = str_to_int(args[2]), x1 = str_to_int(args[3]), y1 = str_to_int(args[4]);
                 char c = args[5][0];
+                if (c == bgc)
+                    changeSymbol(c, command);
                 int color = -1;
                 if (args.size() == 7)
                     color = str_to_int(args[6]);

@@ -33,6 +33,7 @@ bool fitsField(int width, int height, int x1, int y1, int x2, int y2, char c);
 bool fitsField(int width, int height, int x, int y, int r);
 bool checkCommandForCorrect(vector <string>& args);
 bool ifArgNumber(string arg);
+void changeSymbol(char& c, string command);
 
 /* Функции вывода */
 void printError(string error);

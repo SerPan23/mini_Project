@@ -66,3 +66,22 @@ bool fitsField(int width, int height, int x, int y, int r) {
     betta = (y + r <= height) && (y - r >= 0);
     return alpha * betta;
 }
+
+void changeSymbol(char& c, string command)
+{
+    cout << "Do you want change symbol for this command " + command + ",  because this symbol is similar to the background symbol?" << endl;
+    string answer = "";
+    while (answer[0] != 'y' && answer[0] != 'n')
+    {
+        cout << "Please write yes/no: ";
+        cin >> answer;
+        cout << endl;
+    }
+    if (answer[0] == 'y')
+    {
+        cout << "Please write new symbol: ";
+        cin >> c;
+        cout << endl;
+    }
+    return;
+}
