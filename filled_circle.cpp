@@ -19,7 +19,7 @@ int filled_circle(vector <vector <char>>& field, int x0, int y0, int radius, cha
 	int error = 0;
 	while (y > 0) {
 		
-		for (int i = x0-x; i <= x0+x; i++)
+		for (int i = x0-(x-1); i < x0+x; i++)
 		{
 			for (int j = y0-y; j <= y0+y; j++)
 			{
@@ -56,7 +56,7 @@ int filled_circle(vector <vector <char>>& field, int x0, int y0, int radius, cha
 	int error = 0;
 	while (y > 0) {
 
-		for (int i = x0 - x; i <= x0 + x; i++)
+		for (int i = x0 - (x - 1); i < x0 + x; i++)
 		{
 			for (int j = y0 - y; j <= y0 + y; j++)
 			{

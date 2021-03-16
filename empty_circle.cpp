@@ -5,16 +5,16 @@ int empty_circle(vector <vector <char>>& field, int x0, int y0, int radius, char
 	int delta = 1 - 2 * radius;
 	int error = 0;
 
-	if (radius == 2) {
+	/*if (radius == 2) {
 		field[x0 + radius][y0] = c;
 		field[x0 - radius][y0] = c;
 	}
 	else {
 		field[x0 + radius + 1][y0] = c;
 		field[x0 - radius - 1][y0] = c;
-	}
+	}*/
 	
-	while (y > 0) {
+	while (y >= 0) {
 		field[x0 + x][y0 + y] = c;
 		field[x0 + x][y0 - y] = c;
 		field[x0 - x][y0 + y] = c;
