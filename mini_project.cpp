@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
     char bgc = bgargs[2][0];
     if ((w <= 0 || w > 300) || (h <= 0 || h > 300))
     {
-        printError("Error: Uncorrect background size");
+        printError("Error: Incorrect background size");
         return -1;
     }
     vector<vector<char>> field(h, vector<char>(w));
@@ -198,7 +198,7 @@ int main(int argc, char *argv[])
             }
             else
             {
-                printError("Error: Uncorrect command");
+                printError("Error: Incorrect command");
                 return -1;
             }
         }
