@@ -25,7 +25,8 @@ int main(int argc, char *argv[])
         //path = "D:\\Code\\CPP\\Hometask\\miniproject\\mini_Project\\operation.it"; 
         //path = "D:\\Code\\C++\\gitp\\mini_Project\\operation.it";
         cout << "Write the path to the file:" << endl;
-        cin >> path;
+        //cin >> path;
+        getline(cin, path);
         cout << endl;
     }  
     int pathSize = path.size();
