@@ -27,7 +27,15 @@ int main(int argc, char *argv[])
         cout << "Write the path to the file:" << endl;
         //cin >> path;
         getline(cin, path);
-        cout << endl;
+        string answer = "";
+        while (answer[0] != 'y' && answer[0] != 'n')
+        {
+            cout << "Do you want save file?\nPrint yes or no: ";
+            cin >> answer;
+            cout << endl;
+        }
+        if (answer[0] == 'y')
+            needSave = true;
     }  
     int pathSize = path.size();
     if (pathSize < 12)
@@ -76,7 +84,7 @@ int main(int argc, char *argv[])
             string command = commands[i];
             vector <string> args;
             command_parser(args, command);
-            cout << command << endl;
+            //cout << command << endl;
             if (command[0] == 'r')
             {
                 // Empty Rectangular
