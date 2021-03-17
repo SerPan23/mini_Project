@@ -21,6 +21,19 @@ int filled_circle(vector <vector <char>>& field, int x0, int y0, int radius, cha
 int filled_rectangular(vector <vector <char>>& field, char r, int x, int y, int width, int height, int color, vector <vector <int>>& colorsfield);
 int line(vector <vector <char>>& field, int xa, int ya, int xb, int yb, char c, int color, vector <vector <int>>& colorsfield);
 
+/* Команды */
+int make_r(vector <string>& args, string& command, char bgc, int fieldWidth, int fieldHeight, vector<vector<char>>& field, vector<vector<int>>& colorsfield);
+int make_R(vector <string>& args, string& command, char bgc, int fieldWidth, int fieldHeight, vector<vector<char>>& field, vector<vector<int>>& colorsfield);
+int make_c(vector <string>& args, string& command, char bgc, int fieldWidth, int fieldHeight, vector<vector<char>>& field, vector<vector<int>>& colorsfield);
+int make_C(vector <string>& args, string& command, char bgc, int fieldWidth, int fieldHeight, vector<vector<char>>& field, vector<vector<int>>& colorsfield);
+int make_L(vector <string>& args, string& command, char bgc, int fieldWidth, int fieldHeight, vector<vector<char>>& field, vector<vector<int>>& colorsfield);
+int commandHanlder(vector <string> commands, char bgc, int fieldWidth, int fieldHeight, vector<vector<char>> field, vector<vector <int>> colorsfield);
+
+/* Misc */
+void output(int h, int w, vector<vector<char>>& field, vector<vector<int>>& colorsfield);
+int onStart(int argc, char* argv[], string& path, vector <string>& commands, vector <string>& bgargs, bool& needSave);
+int pathSizeHandler(int pathSize, string path);
+
 /* Наши функции */
 void swap(int& a, int& b);
 int str_to_int(string str);
