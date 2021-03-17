@@ -40,7 +40,6 @@ int make_R(vector <string>& args, string& command, char bgc, int fieldWidth, int
     if (c == bgc)
         changeSymbol(c, command);
     int color = -1, r = -1, g = -1, b = -1, s = -1;
-    cout << args.size() << endl;
     if (args.size() == 10)
     {
         r = str_to_int(args[6]);
