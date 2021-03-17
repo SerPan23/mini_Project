@@ -73,7 +73,7 @@ bool fitsField(int width, int height, int x1, int y1, int x2, int y2) {
 }
 
 bool fitsField(int width, int height, int x, int y, int r) {
-    if (x < 0 || y1 < 0 || r < 0 || height < 0 || width < 0) {
+    if (x < 0 || y < 0 || r < 0 || height < 0 || width < 0) {
         printError("Error: Incorrect data");
         return false;
     }
