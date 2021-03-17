@@ -33,6 +33,7 @@ int commandHanlder(vector <string> commands, char bgc, int fieldWidth, int field
 void output(int h, int w, vector<vector<char>>& field, vector<vector<int>>& colorsfield);
 int onStart(int argc, char* argv[], string& path, vector <string>& commands, vector <string>& bgargs, bool& needSave);
 int pathSizeHandler(int pathSize, string path);
+int getColorFromRGBS(int r, int g, int b, int s);
 
 /* Наши функции */
 void swap(int& a, int& b);

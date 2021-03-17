@@ -13,12 +13,12 @@ bool checkCommandForCorrect(vector <string>& args)
 {
     if (args[0] == "r" || args[0] == "R")
     {
-        if ((args.size() > 6 && args.size() < 6) || (args.size() > 7 && args.size() < 7))
+        if (args.size() != 6 && args.size() != 10)
         {
             printError("Error: Incorrect command");
             return 0;
         }
-        if (args.size() > 7 && args.size() < 7)
+        if (args.size() == 10)
         {
             if (!(ifArgNumber(args[1]) && ifArgNumber(args[2]) && ifArgNumber(args[3]) && ifArgNumber(args[4]) && ifArgNumber(args[6])))
             {
@@ -42,12 +42,12 @@ bool checkCommandForCorrect(vector <string>& args)
     }
     else if (args[0] == "L")
     {
-        if ((args.size() > 6 && args.size() < 6) || (args.size() > 7 && args.size() < 7))
+        if (args.size() != 6 && args.size() != 10)
         {
             printError("Error: Incorrect command");
             return 0;
         }
-        if (args.size() > 7 && args.size() < 7)
+        if (args.size() == 10)
         {
             if (!(ifArgNumber(args[1]) && ifArgNumber(args[2]) && ifArgNumber(args[3]) && ifArgNumber(args[4]) && ifArgNumber(args[6])))
             {
@@ -76,12 +76,12 @@ bool checkCommandForCorrect(vector <string>& args)
     }
     else if (args[0] == "c" || args[0] == "C")
     {
-        if ((args.size() > 5 && args.size() < 5) || (args.size() > 6 && args.size() < 6))
+        if (args.size() != 5 && args.size() != 9)
         {
             printError("Error: Incorrect command");
             return 0;
         }
-        if (args.size() > 7 && args.size() < 7)
+        if (args.size() == 9)
         {
             if (!(ifArgNumber(args[1]) && ifArgNumber(args[2]) && ifArgNumber(args[3]) && ifArgNumber(args[5])))
             {
@@ -105,7 +105,7 @@ bool checkCommandForCorrect(vector <string>& args)
     }
     else
     {
-        if (args.size() > 3 && args.size() < 3)
+        if (args.size() != 3)
         {
             printError("Error: Incorrect command");
             return 0;

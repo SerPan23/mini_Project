@@ -9,9 +9,15 @@ int make_r(vector <string>& args, string& command, char bgc, int fieldWidth, int
     char c = args[5][0];
     if (c == bgc)
         changeSymbol(c, command);
-    int color = -1;
-    if (args.size() == 7)
-        color = str_to_int(args[6]);
+    int color = -1, r = -1, g = -1, b = -1, s = -1;
+    if (args.size() == 10)
+    {
+        r = str_to_int(args[6]);
+        g = str_to_int(args[7]);
+        b = str_to_int(args[8]);
+        s = str_to_int(args[9]);
+        color = getColorFromRGBS(r, g, b, s);
+    }
     if (fitsField(fieldWidth, fieldHeight, x, y, width, height, c))
     {
         if (color > -1)
@@ -33,9 +39,16 @@ int make_R(vector <string>& args, string& command, char bgc, int fieldWidth, int
     char c = args[5][0];
     if (c == bgc)
         changeSymbol(c, command);
-    int color = -1;
-    if (args.size() == 7)
-        color = str_to_int(args[6]);
+    int color = -1, r = -1, g = -1, b = -1, s = -1;
+    cout << args.size() << endl;
+    if (args.size() == 10)
+    {
+        r = str_to_int(args[6]);
+        g = str_to_int(args[7]);
+        b = str_to_int(args[8]);
+        s = str_to_int(args[9]);
+        color = getColorFromRGBS(r, g, b, s);
+    }
     if (fitsField(fieldWidth, fieldHeight, x, y, width, height, c))
     {
         if (color > -1)
@@ -56,9 +69,15 @@ int make_c(vector <string>& args, string& command, char bgc, int fieldWidth, int
     char c = args[4][0];
     if (c == bgc)
         changeSymbol(c, command);
-    int color = -1;
-    if (args.size() == 6)
-        color = str_to_int(args[5]);
+    int color = -1, r = -1, g = -1, b = -1, s = -1;
+    if (args.size() == 9)
+    {
+        r = str_to_int(args[5]);
+        g = str_to_int(args[6]);
+        b = str_to_int(args[7]);
+        s = str_to_int(args[8]);
+        color = getColorFromRGBS(r, g, b, s);
+    }
     if (fitsField(fieldWidth, fieldHeight, x, y, radius))
     {
         if (color > -1)
@@ -79,9 +98,15 @@ int make_C(vector <string>& args, string& command, char bgc, int fieldWidth, int
     char c = args[4][0];
     if (c == bgc)
         changeSymbol(c, command);
-    int color = -1;
-    if (args.size() == 6)
-        color = str_to_int(args[5]);
+    int color = -1, r = -1, g = -1, b = -1, s = -1;
+    if (args.size() == 9)
+    {
+        r = str_to_int(args[5]);
+        g = str_to_int(args[6]);
+        b = str_to_int(args[7]);
+        s = str_to_int(args[8]);
+        color = getColorFromRGBS(r, g, b, s);
+    }
     if (fitsField(fieldWidth, fieldHeight, x, y, radius))
     {
         if (color > -1)
@@ -102,9 +127,15 @@ int make_L(vector <string>& args, string& command, char bgc, int fieldWidth, int
     char c = args[5][0];
     if (c == bgc)
         changeSymbol(c, command);
-    int color = -1;
-    if (args.size() == 7)
-        color = str_to_int(args[6]);
+    int color = -1, r = -1, g = -1, b = -1, s = -1;
+    if (args.size() == 10)
+    {
+        r = str_to_int(args[6]);
+        g = str_to_int(args[7]);
+        b = str_to_int(args[8]);
+        s = str_to_int(args[9]);
+        color = getColorFromRGBS(r, g, b, s);
+    }
     if (fitsField(fieldWidth, fieldHeight, x, y, x1, y1))
     {
         if (color > -1)

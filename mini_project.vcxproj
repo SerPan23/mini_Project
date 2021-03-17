@@ -149,6 +149,7 @@
     <ClCompile Include="filled_circle.cpp" />
     <ClCompile Include="filled_rectangular.cpp" />
     <ClCompile Include="functions.cpp" />
+    <ClCompile Include="getColorFromRGBS.cpp" />
     <ClCompile Include="line.cpp" />
     <ClCompile Include="make_commands.cpp" />
     <ClCompile Include="mini_project.cpp" />
