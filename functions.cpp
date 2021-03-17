@@ -59,8 +59,8 @@ bool fitsField(int width, int height, int x1, int y1, int x2, int y2) {
         x1++;
     if (y1 == 0)
         y1++;
-    alpha = (x1 < width) * (x2 <= width);
-    betta = (y1 < height) * (y2 <= height);
+    alpha = (x1 < width) * (x2 < width);
+    betta = (y1 < height) * (y2 < height);
     return alpha * betta;
 }
 
