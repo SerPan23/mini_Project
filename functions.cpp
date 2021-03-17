@@ -48,12 +48,20 @@ void command_parser(vector <string>& args, string command)
 
 bool fitsField(int width, int height, int x1, int y1, int x2, int y2, char c) {
     bool alpha, betta;
+    if (x1 < 0 || y1 < 0 || x2 < 0 || y2 < 0 || height < 0 || width < 0) {
+        printError("Error: Incorrect data");
+        return false;
+    }
     alpha = (x1 <= width) && (x2 <= width);
     betta = (y1 <= height) && (y2 <= height);
     return alpha * betta;
 }
 
 bool fitsField(int width, int height, int x1, int y1, int x2, int y2) {
+    if (x1 < 0 || y1 < 0 || x2 < 0 || y2 < 0 || height < 0 || width < 0) {
+        printError("Error: Incorrect data");
+        return false;
+    }
     bool alpha, betta;
     if (x1 == 0) 
         x1++;
@@ -65,6 +73,10 @@ bool fitsField(int width, int height, int x1, int y1, int x2, int y2) {
 }
 
 bool fitsField(int width, int height, int x, int y, int r) {
+    if (x < 0 || y1 < 0 || r < 0 || height < 0 || width < 0) {
+        printError("Error: Incorrect data");
+        return false;
+    }
     bool alpha, betta;
     alpha = (x + r <= width) && (x - r >= 0);
     betta = (y + r <= height) && (y - r >= 0);
